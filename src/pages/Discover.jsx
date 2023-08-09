@@ -22,7 +22,11 @@ const Discover = () => {
           ))}
         </select>
       </div>
-      <div className="flex flex-wrap sm:justify-start justify-center gap-8"></div>
+      <div className="flex flex-wrap sm:justify-start justify-center gap-8">
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((song, index) => (
+          <SongCard key={song.key} song={song} index={index} />
+        ))}
+      </div>
     </div>
   );
 };
